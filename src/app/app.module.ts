@@ -6,13 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Components
-import { PostComponent } from './shared/components/post/post.component';
+import { PostListComponent } from './shared/components/post-list/post-list.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostComponent,
+    PostListComponent,
     ProfileComponent
   ],
   imports: [

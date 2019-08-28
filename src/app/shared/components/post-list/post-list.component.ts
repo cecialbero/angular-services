@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.sass']
+  selector: 'app-post-list',
+  templateUrl: './post-list.component.html',
+  styleUrls: ['./post-list.component.sass']
 })
-export class PostComponent implements OnInit {
-  private posts: any;
+export class PostListComponent implements OnInit {
+  posts: any;
 
   constructor(private service: PostService) { }
 
