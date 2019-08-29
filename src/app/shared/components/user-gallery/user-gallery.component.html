@@ -1,0 +1,5 @@
+<div class="row">
+  <div class="col-sm-3" *ngFor="let image of gallery | slice:0:8; let i=index">
+    <img src="{{ image.thumbnailUrl }}" alt="{{ image.title }}" class="img-thumbnail">
+  </div>
+</div>
