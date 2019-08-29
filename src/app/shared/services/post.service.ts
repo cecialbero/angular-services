@@ -7,9 +7,9 @@ import { GET_POSTS } from '../../app.endpoints';
 })
 export class PostService {
 
-  getPost() {
+  constructor(private http: HttpClient) { }
+
+  getPosts() {
     return this.http.get(GET_POSTS);
   }
-
-  constructor(private http: HttpClient) { }
 }
