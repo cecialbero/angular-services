@@ -8,12 +8,16 @@ import { AppComponent } from './app.component';
 // Components
 import { PostListComponent } from './shared/components/post-list/post-list.component';
 import { ProfileComponent } from './modules/profile/profile.component';
+import { UserInfoComponent } from './shared/components/user-info/user-info.component';
+import { UserGalleryComponent } from './shared/components/user-gallery/user-gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListComponent,
-    ProfileComponent
+    ProfileComponent,
+    UserInfoComponent,
+    UserGalleryComponent
   ],
   imports: [
     BrowserModule,
