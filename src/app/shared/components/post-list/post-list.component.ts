@@ -7,15 +7,93 @@ import { PostService } from '../../services/post.service';
   styleUrls: ['./post-list.component.sass']
 })
 export class PostListComponent implements OnInit {
-  posts: any;
+  posts: any[];
 
   constructor(private service: PostService) { }
 
+  /* GET 1 */
+  // ngOnInit() {
+  //   this.service.getPosts()
+  //     .subscribe(response => {
+  //       this.posts = response;
+  //     });
+  // }
+
+
+/* GET 2 */
   ngOnInit() {
-    this.service.getPosts()
-      .subscribe(response => {
-        this.posts = response;
+   this.showPost();
+ }
+ /* method to call get-api from app.service */
+ showPost() {
+   try {
+     this.service.getPosts()
+       .subscribe(resp => {
+         this.posts = resp
+       },
+         error => {
+           console.log(error, 'get error');
+         })
+   } catch (e) {
+     console.log(e, 'e');
+   }
+ }
+
+ // ----------------
+
+ /* POST 1 */
+  // createPost(input: HTMLInputElement) {
+  //   const post: any = { title: input.value };
+  //   input.value = '';
+  //
+  //   this.service.createPost(post)
+  //     .subscribe(resp => {
+  //       post.id = resp;
+  //       this.posts.splice(0, 0, post);
+  //     });
+  // }
+
+  /*POST 2*/
+  createPost(input: HTMLInputElement) {
+    try {
+      const post: any = { title: input.value };
+      input.value = '';
+
+      this.service.createPost(post)
+        .subscribe(resp => {
+          post.id = resp;
+          this.posts.splice(0, 0, post);
+        },
+        error => {
+          console.log(error, 'post error');
+        });
+
+     } catch (e) {
+       console.log(e);
+     }
+  }
+
+  /*PUT*/
+  updatePost(post) {
+    this.service.updatePost(post)
+      .subscribe(resp => {
+        console.log(resp);
+      },
+      error => {
+          console.log(error, 'put error');
       });
+  }
+
+  /*DELETE*/
+  deletePost(post) {
+    this.service.deletePost(post)
+      .subscribe(resp => {
+        const index = this.posts.indexOf(post);
+        this.posts.splice(index, 1);
+      },
+    error => {
+      console.log(error, 'delete error');
+    });
   }
 
 }

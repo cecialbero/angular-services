@@ -12,4 +12,16 @@ export class PostService {
   getPosts() {
     return this.http.get(GET_POSTS);
   }
+
+  createPost(post: any) {
+    return this.http.post(GET_POSTS, post);
+  }
+
+  updatePost(post: any) {
+    return this.http.put(GET_POSTS + '/' + post.id, post);
+  }
+
+  deletePost(post: any) {
+    return this.http.delete(GET_POSTS + '/' + post.id);
+  }
 }
