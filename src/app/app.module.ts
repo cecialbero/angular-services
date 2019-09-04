@@ -10,6 +10,7 @@ import { PostListComponent } from './shared/components/post-list/post-list.compo
 import { ProfileComponent } from './modules/profile/profile.component';
 import { UserInfoComponent } from './shared/components/user-info/user-info.component';
 import { UserGalleryComponent } from './shared/components/user-gallery/user-gallery.component';
+import { YoutubeProfileComponent } from './modules/youtube-profile/youtube-profile.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UserGalleryComponent } from './shared/components/user-gallery/user-gall
     PostListComponent,
     ProfileComponent,
     UserInfoComponent,
-    UserGalleryComponent
+    UserGalleryComponent,
+    YoutubeProfileComponent
   ],
   imports: [
     BrowserModule,
