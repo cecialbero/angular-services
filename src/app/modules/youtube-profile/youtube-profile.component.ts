@@ -16,7 +16,7 @@ export class YoutubeProfileComponent implements OnInit {
     this.youTubeService
       .getVideosForChanel('UCMTcT9Rc7eO9r1rkPFHqwLA', 4)
       .subscribe(resp => {
-        this.videos = resp.items;
+        this.videos = (resp['items']);
       });
     }
 
