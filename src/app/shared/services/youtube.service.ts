@@ -12,7 +12,7 @@ export class YoutubeService {
   constructor(public http: HttpClient) { }
 
   getVideosForChanel(channel, maxResults) {
-    let url = GET_YOUTUBE_SEARCH + '?key=' + this.apiKey + '&channelId=' + channel + '&order=date&part=snippet &type=video,id&maxResults=' + maxResults;
+    const url = GET_YOUTUBE_SEARCH + '?key=' + this.apiKey + '&channelId=' + channel + '&order=date&part=snippet &type=video,id&maxResults=' + maxResults;
 
     return this.http.get(url);
   }
