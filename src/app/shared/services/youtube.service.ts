@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { GET_YOUTUBE_SEARCH } from '../../app.endpoints';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class YoutubeService {
   constructor(public http: HttpClient) { }
 
   getVideosForChanel(channel, maxResults) {
-    let url: any = 'https://www.googleapis.com/youtube/v3/search?key=' + this.apiKey + '&channelId=' + channel + '&order=date&part=snippet &type=video,id&maxResults=' + maxResults;
+    let url = GET_YOUTUBE_SEARCH + '?key=' + this.apiKey + '&channelId=' + channel + '&order=date&part=snippet &type=video,id&maxResults=' + maxResults;
 
     return this.http.get(url);
   }

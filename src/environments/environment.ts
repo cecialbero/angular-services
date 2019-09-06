@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  endTypicodePlaceholder: 'https://jsonplaceholder.typicode.com'
+  endTypicodePlaceholder: 'https://jsonplaceholder.typicode.com',
+  youtubeApi: 'https://www.googleapis.com/youtube/v3'
 };
 
 /*
