@@ -13,6 +13,7 @@ import { UserGalleryComponent } from './shared/components/user-gallery/user-gall
 import { YoutubeProfileComponent } from './modules/youtube-profile/youtube-profile.component';
 import { SpotifyReleasesComponent } from './modules/spotify-releases/spotify-releases.component';
 import { ArtistCardComponent } from './shared/components/artist-card/artist-card.component';
+import { HomeComponent } from './modules/home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ArtistCardComponent } from './shared/components/artist-card/artist-card
     UserGalleryComponent,
     YoutubeProfileComponent,
     SpotifyReleasesComponent,
-    ArtistCardComponent
+    ArtistCardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
