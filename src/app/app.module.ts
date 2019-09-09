@@ -11,6 +11,8 @@ import { ProfileComponent } from './modules/profile/profile.component';
 import { UserInfoComponent } from './shared/components/user-info/user-info.component';
 import { UserGalleryComponent } from './shared/components/user-gallery/user-gallery.component';
 import { YoutubeProfileComponent } from './modules/youtube-profile/youtube-profile.component';
+import { SpotifyReleasesComponent } from './modules/spotify-releases/spotify-releases.component';
+import { ArtistCardComponent } from './shared/components/artist-card/artist-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { YoutubeProfileComponent } from './modules/youtube-profile/youtube-profi
     ProfileComponent,
     UserInfoComponent,
     UserGalleryComponent,
-    YoutubeProfileComponent
+    YoutubeProfileComponent,
+    SpotifyReleasesComponent,
+    ArtistCardComponent
   ],
   imports: [
     BrowserModule,
