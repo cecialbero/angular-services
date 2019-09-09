@@ -16,9 +16,7 @@ export class SpotifyReleasesComponent implements OnInit {
     this.spotify.getNewReleases()
     .subscribe( data => {
 
-      console.log(data);
       this.songList = data;
-      // iterar dentro de data para conseguir la info de alguno
     });
   }
 
