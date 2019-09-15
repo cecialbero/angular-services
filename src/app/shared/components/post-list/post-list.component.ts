@@ -12,37 +12,37 @@ export class PostListComponent implements OnInit {
   constructor(private service: PostService) { }
 
   /* GET 1 */
-  // ngOnInit() {
-  //   this.service.getPosts()
-  //     .subscribe(response => {
-  //       this.posts = response;
-  //     });
-  // }
+  ngOnInit() {
+   this.service.getPosts()
+     .subscribe(response => {
+       this.posts = response;
+     });
+  }
 
 
 /* GET 2 */
-  ngOnInit() {
-   this.showPost();
- }
+ //  ngOnInit() {
+ //   this.showPost();
+ // }
  /* method to call get-api from app.service */
- showPost() {
-   try {
-     this.service.getPosts()
-       .subscribe(
-         resp => {
-           this.posts = resp;
-         },
-         (error: Response) => {
-           if (error.status === 404) {
-             console.log(error, '404 error');
-           } else {
-             console.log(error, 'get error');
-           }
-         });
-   } catch (e) {
-     console.log(e, 'e');
-   }
- }
+ // showPost() {
+ //   try {
+ //     this.service.getPosts()
+ //       .subscribe(
+ //         resp => {
+ //           this.posts = resp;
+ //         },
+ //         (error: Response) => {
+ //           if (error.status === 404) {
+ //             console.log(error, '404 error');
+ //           } else {
+ //             console.log(error, 'get error');
+ //           }
+ //         });
+ //   } catch (e) {
+ //     console.log(e, 'e');
+ //   }
+ // }
 
  // ----------------
 
