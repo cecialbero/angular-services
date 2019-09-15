@@ -9,13 +9,15 @@ import { UserInfoService } from '../../services/user-info.service';
 export class UserInfoComponent implements OnInit {
 
   user: any;
+  userId = 4;
 
   constructor(private service: UserInfoService) { }
 
   ngOnInit() {
-    this.service.getUsers()
+    this.service
+      .getUsers()
       .subscribe(response => {
-        this.user = response;
+        this.user = response[this.userId];
       });
   }
 
