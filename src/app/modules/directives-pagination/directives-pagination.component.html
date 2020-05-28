@@ -1,0 +1,42 @@
+<nav>
+  <ul class="pagination">
+    <li class="page-item"
+    [ngClass]="{disabled: currentPage === 0}">
+      <a class="page-link" (click)="currentPage = currentPage - 1" href="#">Prev</a>
+    </li>
+    <ng-container *ngFor="let image of images; let i = index">
+      <li
+      class="page-item"
+      *ngIf="i < 5"
+      [ngClass]="{active: i === currentPage}"
+      >
+        <a (click)="currentPage = i" class="page-link" href="#">{{ i + 1 }}</a>
+      </li>
+    </ng-container>
+    <li class="page-item"
+    [ngClass]="{disabled: currentPage === images.length -1}"
+    >
+      <a (click)="currentPage = currentPage + 1" class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<div>
+  <h4 [appHighlight]="'orange'">{{ images[currentPage].title }}</h4>
+  <img [src]="images[currentPage].url">
+</div>
+<br>
+<br>
+<br>
+
+<nav class="nav">
+  <a class="nav-link active" href="#" (click)="switchTab(1)" [ngClass]="{'active' : tabNumber == 1}">One</a>
+  <a class="nav-link" href="#" (click)="switchTab(2)" [ngClass]="{'active' : tabNumber == 2}">Two</a>
+  <a class="nav-link" href="#" (click)="switchTab(3)" [ngClass]="{'active' : tabNumber == 3}">Three</a>
+</nav>
+
+<div [ngSwitch]="tabNumber" class="nav-body">
+  <div *ngSwitchCase="1">Shows tab one content</div>
+  <div *ngSwitchCase="2">Shows tab two content</div>
+  <div *ngSwitchCase="3">Shows tab three content</div>
+</div>

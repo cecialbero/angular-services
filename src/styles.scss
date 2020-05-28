@@ -4,6 +4,20 @@ h1, h2, h3, h4, h5, h6{
   margin-bottom: 30px;
 }
 
-p {
-  margin-bottom: 20px;
+button { margin-right: 5px; margin-bottom: 30px; }
+
+.nav-link {
+  border: 1px solid #dee2e6;
+  border-radius: 5px 5px 0 0;
+
+  &.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+}
+
+.nav-body {
+  display: inline-block;
+  border: 1px solid #dee2e6;
+  padding: 20px;
 }

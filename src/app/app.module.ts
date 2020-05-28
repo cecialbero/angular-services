@@ -14,6 +14,13 @@ import { YoutubeProfileComponent } from './modules/youtube-profile/youtube-profi
 import { SpotifyReleasesComponent } from './modules/spotify-releases/spotify-releases.component';
 import { ArtistCardComponent } from './shared/components/artist-card/artist-card.component';
 import { HomeComponent } from './modules/home/home.component';
+import { PipesComponent } from './modules/pipes/pipes.component';
+import { ConverterPipe } from './shared/pipes/converter.pipe';
+import { DirectivesPaginationComponent } from './modules/directives-pagination/directives-pagination.component';
+import { HighlightDirective } from './shared/directives/highlight.directive';
+import { WsearchComponent } from './modules/wsearch/wsearch.component';
+import { SearchComponent } from './modules/wsearch/search/search.component';
+import { ResultsComponent } from './modules/wsearch/results/results.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,14 @@ import { HomeComponent } from './modules/home/home.component';
     YoutubeProfileComponent,
     SpotifyReleasesComponent,
     ArtistCardComponent,
-    HomeComponent
+    HomeComponent,
+    PipesComponent,
+    ConverterPipe,
+    DirectivesPaginationComponent,
+    HighlightDirective,
+    WsearchComponent,
+    SearchComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
